@@ -36,9 +36,12 @@ with open(resume_file, "rb") as pdf_file:
 
 
 # HERO SECTION
-col1,col2 = st.columns(2,gap = "small")
+col1, col2 = st.columns(2, gap="small")
+
 with col1:
-    st.image(profile_pic, width = 200)
+    # Convert PosixPath object to string
+    st.image(str(profile_pic), width=200)
+
 with col2:
     st.title(NAME)
     st.write(DESCRIPTION)
